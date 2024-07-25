@@ -23,7 +23,8 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider
-      publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+      signInFallbackRedirectUrl={process.env.NEXT_PUBLIC_SITE_URL}
+      signUpFallbackRedirectUrl={process.env.NEXT_PUBLIC_SITE_URL}
     >
       <html lang="en" suppressHydrationWarning>
         <body className={cn(font.className, "bg-white dark:bg-[#313338]")}>
