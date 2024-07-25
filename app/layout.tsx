@@ -22,10 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider
-      signInFallbackRedirectUrl={process.env.NEXT_PUBLIC_SITE_URL}
-      signUpFallbackRedirectUrl={process.env.NEXT_PUBLIC_SITE_URL}
-    >
+    <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
         <body className={cn(font.className, "bg-white dark:bg-[#313338]")}>
           <ThemeProvider
